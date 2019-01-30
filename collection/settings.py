@@ -38,6 +38,11 @@ INSTALLED_APPS = [
     'btre_accounts.apps.BtreAccountsConfig',
     'btre_contacts.apps.BtreContactsConfig',
     'django.contrib.humanize',
+    'cushion_shop.apps.CushionShopConfig',
+    'cushion_cart.apps.CushionCartConfig',
+    'cushion_order.apps.CushionOrderConfig',
+    'cushion_search.apps.CushionSearchConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
