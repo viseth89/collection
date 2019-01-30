@@ -3,5 +3,5 @@ env/
 *.pot
 *.pyc
 __pycache__/
-local_settings.pyc
-media
+local_settings.py
+media/
