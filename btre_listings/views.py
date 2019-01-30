@@ -8,8 +8,8 @@ def listings(request):
     listings = Listing.objects.order_by('-list_date').filter(is_published=True)
     
     # Create Paginator variable with listing model and limit of 3 pages
-    paginator = Paginator(listings, 3)
-    
+    paginator = Paginator(listings, 9)
+    # Working on pagination / 1-30
     # 'page' is url parameter we are looking for 
     page = request.GET.get('page') 
     
