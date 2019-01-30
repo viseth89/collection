@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '4x&x@ub4$(=&3ut+u7=yyh4*ke)a+6+91@ovy6x&$8n^en#nn#'
+SECRET_KEY = '$2p!fu^isb8amnw^se-*0wiu8qif+)0iu!m&gff%(h2sr6cum@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'btre_pages.apps.BtrePagesConfig',
+    'btre_listings.apps.BtreListingsConfig',
+    'btre_realtors.apps.BtreRealtorsConfig',
+    'btre_accounts.apps.BtreAccountsConfig',
+    'btre_contacts.apps.BtreContactsConfig',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
@@ -117,4 +123,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') # this is the folder that is created when you collectstatic
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+# Messages
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
