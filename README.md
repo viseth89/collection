@@ -11,3 +11,11 @@ Goals
 2.  Use of Models in sql-lite before transfering to postgres on server
 3.  Better use of local-settings file
 4.  Improve Portfolio with new 
+
+1/31/19
+Added Sloth
+BS4 template
+Broke into django,
+partials / base html
+
+Working on adding functionality
