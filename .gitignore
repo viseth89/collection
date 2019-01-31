@@ -9,3 +9,4 @@ media/
 db.sqlite3
 /migrations/
 migrations/
+local.py

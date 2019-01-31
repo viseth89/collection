@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="{% static 'sloth_shop/css/bootstrap.min.css' %}" />
+  <!-- main css -->
+  <link rel="stylesheet" href="{% static 'sloth_shop/css/main.css' %}" />
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet" />
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="{% static 'sloth_shop/css/all.css' %}" />
+  <title>Comfy Sloth</title>
+  <style></style>
+</head>
+
+<body>
+
+  <!-- Start of Header-->
+  <!-- Header carries into pages-->
+  <header>
+
+  <!-- Nav Bar -->
+  {% include 'sloth_shop/partials/_navbar.html' %}
+  {% block content %}
+
+
+  {% endblock %}
+  <!-- Footer -->
+  {% include 'sloth_shop/partials/_footer.html' %}
+
+  <!-- jquery -->
+  <script src="{% static 'sloth_shop/js/jquery-3.3.1.min.js' %}"></script>
+  <!-- bootstrap js -->
+  <script src="{% static 'sloth_shop/js/bootstrap.bundle.min.js' %}"></script>
+  <!-- script js -->
+  <script src="{% static 'sloth_shop/js/app.js' %}"></script>
+</body>
+
+</html>

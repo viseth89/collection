@@ -14,7 +14,6 @@ urlpatterns = [
     path('btre/accounts', include('btre_accounts.urls')),
     path('btre/contacts', include('btre_contacts.urls')),
 
-
     path('cushion/shop/', include('cushion_shop.urls')),
     path('cushion/cart/', include('cushion_cart.urls')),
     path('cushion/search/', include('cushion_search.urls')),
@@ -22,7 +21,12 @@ urlpatterns = [
 
     path('account/create', views.signupView, name='signup'),
     path('account/login', views.signinView, name='signin'),
-    path('account/logout/', views.signoutView, name='signout')
+    path('account/logout/', views.signoutView, name='signout'),
+
+    path('sloth/', include ('sloth_shop.urls')),
+    path('sloth/cart', include('sloth_cart.urls')),
+
+
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

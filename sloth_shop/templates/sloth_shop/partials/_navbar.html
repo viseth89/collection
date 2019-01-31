@@ -1,0 +1,52 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <!--
+      https://www.iconfinder.com/icons/185106/armchair_chair_streamline_icon
+      Creative Commons (Attribution 3.0 Unported);
+      https://www.iconfinder.com/webalys
+    -->
+
+  <a href="{% url 'sloth' %}" class="navbar-brand">
+    <img src="{% static 'sloth_shop/img/logo.png' %}" alt="company logo" />
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#myNavbar"
+  >
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item mx-2 nav-active">
+        <a href="{% url 'sloth' %}" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a href="{% url 'products' %}" class="nav-link">Products</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a href="{% url 'productDetail' %}" class="nav-link">Single Products</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a href="{% url 'cart' %}" class="nav-link">Store</a>
+      </li>
+    </ul>
+  </div>
+  <div class="navbar-icons d-none d-lg-flex">
+    <!-- Single Icon-->
+    <div class="navbar-icon mx-2">
+      <i class="fas fa-search"></i>
+    </div>
+    <!-- End of Single Icon-->
+    <!-- Single Icon-->
+    <a href="store" class="navbar-icon mx-2 navbar-cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+      <div class="cart-items">
+        2
+      </div>
+    </a>
+    <!-- End of Single Icon-->
+  </div>
+</nav>

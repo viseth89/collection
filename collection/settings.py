@@ -32,17 +32,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
+    # Real Estate 
     'btre_pages.apps.BtrePagesConfig',
     'btre_listings.apps.BtreListingsConfig',
     'btre_realtors.apps.BtreRealtorsConfig',
     'btre_accounts.apps.BtreAccountsConfig',
     'btre_contacts.apps.BtreContactsConfig',
-    'django.contrib.humanize',
+    # Cushion Shop
     'cushion_shop.apps.CushionShopConfig',
     'cushion_cart.apps.CushionCartConfig',
     'cushion_order.apps.CushionOrderConfig',
     'cushion_search.apps.CushionSearchConfig',
     'crispy_forms',
+    # Sloth Shop
+    'sloth_shop.apps.SlothShopConfig',
+    'sloth_cart.apps.SlothCartConfig'
 ]
 
 MIDDLEWARE = [
@@ -141,6 +146,6 @@ MESSAGE_TAGS = {
 # Need creation of local_settings
 
 try:
-    from . local_settings import *
+    from . local import *
 except ImportError:
     pass
