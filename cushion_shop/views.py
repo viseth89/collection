@@ -8,7 +8,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
 
 def index(request):
-	text_var = 'This is my first django app web page.'
+	text_var = 'This is django test page, currently added sloth, cushion and btre'
 	return HttpResponse(text_var)
 
 #Category view
